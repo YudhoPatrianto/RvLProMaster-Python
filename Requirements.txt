@@ -1,0 +1,10 @@
+python-dotenv
+httpx
+asyncio
+google-generativeai
+duck-chat
+yt-dlp
+requests
+speedtest-cli
+pymongo
+openai
