@@ -7,8 +7,8 @@ python3 -m venv .venv
 source .venv/bin/activate
 ```
 #### Windows Users (CMD)
-```bash
-source .venv/bin/activate
+```bat
+\.venv\bin\activate.bat
 ```
 #### Upgrade Pip To Latest Version
 ```bash
@@ -20,5 +20,5 @@ pip install -r requirements.txt
 ```
 #### Run The Bots
 ```bash
-.venv/bin/python3 main.py
+python3 main.py
 ```

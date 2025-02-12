@@ -1,16 +1,12 @@
 # Load Library
-from RvLProMaster.Secret.secret import GetSecret
+from RvLProMaster import endpoint
 from httpx import AsyncClient
-
-# Endpoint
-endpoint = GetSecret.endpoint
 
 @staticmethod
 async def clear_log():
     async with AsyncClient() as client:
         r = await client.get(f'{endpoint}/getUpdates')
         d = r.json()
-        
         if d['result']:
             l = max(update['update_id'] for update in d['result'])
             payload = {'offset': l + 1}
