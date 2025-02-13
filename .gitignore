@@ -3,4 +3,4 @@
 *.Env
 
 # Hide File Config
-RvLProMaster/Secret/.env
+RvLProMaster/Secret/*.env
