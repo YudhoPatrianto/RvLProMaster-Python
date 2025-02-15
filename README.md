@@ -22,3 +22,16 @@ pip install -r requirements.txt
 ```bash
 python3 main.py
 ```
+
+#### Usage:
+```python
+from RvLProMaster import Types, bot
+import asyncio
+
+async def MyBots():
+    while True: # Add This If Your Bot Still Want's Running, or you can see file main.py
+        types = Types.RunBOT()
+        if types.text == "/start":
+            await bot.Methods.sendMessage(types.chat_id, "*Hi I'm From `/start`*","MarkdownV2")
+
+asyncio.run(MyBots())

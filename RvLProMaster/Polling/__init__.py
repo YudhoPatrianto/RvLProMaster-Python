@@ -1,1 +1,1 @@
-from .extract_polling import run
+from .extract_polling import Types

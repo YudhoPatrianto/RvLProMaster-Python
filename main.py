@@ -1,10 +1,9 @@
-from RvLProMaster import bot, run
-from json import dumps
+from RvLProMaster import bot, Types
 import asyncio
 
 async def main():
     while True:
-        out_polling, user_id, first_name, last_name, username, chat_id, group_title, group_username, text, reply, channel_title = await run()
-        if text == "/start":
-            await bot.Methods.sendMessage(chat_id, "*Hi I'm From Start*", "MarkdownV2")
+        types = await Types.RunBOT()
+        if types.text == "/start":
+            await bot.Methods.sendMessage(types.chat_id, "*Hi I'm From `/start`*","MarkdownV2")
 asyncio.run(main())
