@@ -5,7 +5,7 @@ async def main():
     while True:
         types = await Types.RunBOT()
         if types.text == "/start":
-            await bot.Methods.sendMessage(types.chat_id, "*Hi I'm From `/start`*","MarkdownV2")
+            await bot.Methods.sendMessage(types.chat_id, "*Hi I'm From `/start`*","MarkdownV2", reply_message=types.reply_message)
 
 
 asyncio.run(main())

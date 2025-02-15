@@ -24,6 +24,7 @@ class bot:
             parse_mode: Optional[Literal['Markdown', 'MarkdownV2', 'HTML']] = 'MarkdownV2',
             disable_notification: Optional[bool] = None,
             protect_content: Optional[bool] = None,
+            reply_message: Optional[Union[int, str]] = None
         ):
             async with AsyncClient() as client:
                 payload = {
@@ -31,7 +32,8 @@ class bot:
                     'text': text,
                     'parse_mode': parse_mode,
                     'disable_notification': disable_notification,
-                    'protect_content': protect_content
+                    'protect_content': protect_content,
+                    'reply_to_message_id': reply_message
                 }
                 r = await client.post(f"{endpoint}/sendMessage", json=payload)
                 return r.json()
