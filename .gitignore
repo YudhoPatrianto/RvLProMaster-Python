@@ -4,3 +4,6 @@
 
 # Hide File Config
 RvLProMaster/Secret/*.env
+
+# Ignore Vscode Configuration
+*.vscode
